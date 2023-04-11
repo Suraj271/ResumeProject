@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+<title> About Me Page</title>
+{% endblock title %}
+
+{% block css %}
+{% endblock css %}
+
+
+{% block body %}
+
+<div class="container">
+    <!-- img div  -->
+    <div class="container text-center">
+        <img src="{% static 'srk.jpg' %}" alt="" width="300px">
+    </div>
+
+    <!-- text div  -->
+    <div class="container mt-5 text-center">
+        <p class="display-5">Suraj Yadav</p>
+
+
+        <!-- about div -->
+        <div class="container">
+            <p class="lead display-5 text-danger">
+                
+                My Name is Suraj Rajbahadur Yadav.<br>I'm From Thane,Maharashtra....<br>
+                I am 21 Years Old<br>
+                I have Completed My Graduation In Bachelor OF Science In InFormation Technology<br>
+            </p>
+        </div>
+    </div>
+
+
+
+{% endblock body %}

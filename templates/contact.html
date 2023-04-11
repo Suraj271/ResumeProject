@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+<title>Contact Me </title>
+{% endblock title %}
+
+{% block css %}
+{% endblock css %}
+
+{% block body %}
+
+    <div class="container">
+
+        <!-- heading  -->
+        <div class="container my-5 bg-danger text-light text-center p-2 border-end rounded-3">
+            <h1>Contact Me</h1>
+        </div>
+
+        <!-- form div  -->
+        <div class="my-5">
+            <form action="{% url 'contactme' %}" , method="post">
+                {% csrf_token %}
+
+            <!-- name div  -->
+            <div class="my-3">
+                <label for="">Enter Your Name</label>
+                <input type="text" name="name" class="form-control">
+            </div>
+
+            
+            <!-- email div  -->
+            <div class="mb-3">
+                <label for="email" class="text-primary">Enter Your Email </label>
+                <input type="email" name="email" class="form-control">
+            </div>
+            
+            <!-- purpose div  -->
+            <div class="mb-3">
+                <label for="" class="text-primary">Purpose</label>
+                <textarea name="purpose" id="" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+
+            <!-- button  -->
+            <div class="md-3">
+                <input type="submit" class="btn btn-success" value="contact">
+            </div>
+
+
+
+            </form>
+        </div>
+
+
+        
+{% endblock body %}

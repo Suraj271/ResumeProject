@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+<title> Qualification Page </title>
+{% endblock title %}
+
+
+{% block css %}
+{% endblock css %}
+
+
+{% block body %}
+
+    <div class="container">
+
+        <!-- heading  -->
+        <div class="container my-5 bg-secondary border-end shadow text-center text-light p-2 rounded-3">
+            <h1>Qualification Page</h1>
+        </div>
+
+        <!-- content  -->
+
+        <table class="table">
+
+            <thead>
+                <th>Sr</th>
+                <th>Study</th>
+                <th>Board</th>
+                <th>year</th>
+
+            </thead>
+
+            <tbody>
+
+                {% for k,v in study.items %}
+                <tr>    
+                {% for key,value in v.items %}
+                   <td>{{value}}</td>
+                {% endfor %}
+                </tr>
+
+                {% endfor %}
+
+
+
+            </tbody>
+
+        </table>
+
+
+
+
+
+
+
+
+    </div>
+
+{% endblock body %}

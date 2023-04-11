@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title> Projects Page</title>
+{% endblock title %}
+
+
+
+{% block css %}
+{% endblock css %}
+
+
+{% block body %}
+
+ <!-- heading  -->
+<div class="conatiner bg-secondary p-2 text-center text-light rounded-3 shadow mb-4">
+    <h1 class="display-5 ">My Projects</h1>
+</div>
+
+
+ <!-- content  -->
+
+ <div class="container my-5 rounded shadow mb-4">
+    <table class="table">
+        <thead class="container text-danger">
+            <th>Sr</th>
+            <th>Topic</th>
+            <th>Technology</th>
+        </thead>
+        <tbody>
+
+            
+            {% for key,value in project.items %}
+            <tr>
+            {% for k,v in value.items %}
+            <td>{{v}}</td>
+            {% endfor %}
+
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+
+ </div>
+
+
+
+
+{% endblock body %}
